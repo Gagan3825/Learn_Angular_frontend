@@ -1,0 +1,23 @@
+<!-- <p>data-binding works!</p>
+interpolation
+<h3>{{username}}</h3>  
+Property Binding
+<button [disabled]="isDisable">Click me</button>
+Event binding -->
+ <!-- <h4>{{title}}</h4>
+ <button (click)="changetitle()">Change title</button> -->
+
+
+ <div>
+    <h2>Two-way binding</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" placeholder="enter your name" [(ngModel)]="name">
+    <label for="email">Email:</label>
+    <input type="email" placeholder="enter your email" [(ngModel)]="email" >
+
+
+    <h4>Information</h4>
+     <p>Name:{{name}}</p>
+     <p>Email:{{email}}</p>
+ </div>
