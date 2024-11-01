@@ -1,0 +1,54 @@
+<div class="maincontainer">
+  <form [formGroup]="registerform" (ngSubmit)="onsubmit()">
+    <h2 style="text-align: center">Registration form</h2>
+    <div class="namecontainer">
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" class="inputcontainer" />
+      <div
+        *ngIf="
+          registerform.get('name')?.invalid && registerform.get('name')?.touched
+        "
+      >
+        Name is required
+      </div>
+    </div>
+    <div class="namecontainer">
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" class="inputcontainer" />
+      <div
+        *ngIf="
+          registerform.get('email')?.invalid &&
+          registerform.get('email')?.touched
+        "
+      >
+        <span *ngIf="registerform.get('email')?.errors?.['required']"
+          >Email is required.</span
+        >
+        <span *ngIf="registerform.get('email')?.errors?.['email']"
+          >Invalid email format.</span
+        >
+      </div>
+    </div>
+    <div class="namecontainer">
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password" class="inputcontainer" />
+      <div
+        *ngIf="
+          registerform.get('password')?.invalid &&
+          registerform.get('password')?.touched
+        "
+      >
+        <span *ngIf="registerform.get('password')?.errors?.['required']"
+          >Password is required.</span
+        >
+        <span *ngIf="registerform.get('password')?.errors?.['minlength']"
+          >Minimum 8 characters.</span
+        >
+      </div>
+    </div>
+
+    <div class="namecontainer">
+      <button type="submit" [disabled]="registerform.invalid" class="btn">Register</button>
+    </div>
+  </form>
+</div>

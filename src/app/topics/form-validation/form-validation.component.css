@@ -1,0 +1,80 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: grid;
+  place-items: center; /* Center items both horizontally and vertically */
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+}
+
+.maincontainer {
+  width: 350px; /* Slightly wider */
+  padding: 30px;
+  height: 350px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.namecontainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.inputcontainer {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.inputcontainer:focus {
+  border-color: #007bff;
+}
+
+.namecontainer div {
+  color: #d9534f;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.btn {
+  padding: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+}
+
+.btn:hover:enabled {
+  background-color: #0056b3;
+}

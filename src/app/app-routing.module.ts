@@ -5,6 +5,7 @@ import { MainComponent } from './main/main.component';
 import { DataBindingComponent } from './topics/data-binding/data-binding.component';
 import { DirectiveLearnComponent } from './topics/directive-learn/directive-learn.component';
 import { ProductListComponent } from './topics/data-flow/product-list/product-list.component';
+import { FormValidationComponent } from './topics/form-validation/form-validation.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
   },
   {
     path:"data-flow",component:ProductListComponent
+  },
+  {
+    path:"form-valid",component:FormValidationComponent
   }
 ];
 
